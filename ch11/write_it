@@ -1,0 +1,19 @@
+# Create 10 random numbers that are 7 digits long (MUST BE 7 DIGITS!)
+# Write those numbers to a file called "numbers.txt"
+# Close the file
+
+#HCD Write It 2/8/18
+import random
+
+def writeit(f): #imports file sent to it, opens it as file
+    file=open(f,'w')
+    for i in range(10): #creates 10 random numbers
+        strnum=''
+        for x in range (7): #to make it 7 digits long I create 7 different numbers, added them to a string
+            num=random.randint(0,9)
+            strnum+=str(num)
+        file.write(strnum+'\n')#write the final 7 digit number
+
+
+
+writeit('numbers.txt')
